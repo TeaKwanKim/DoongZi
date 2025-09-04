@@ -2,39 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* QuietNest Design System - 조용하고 평화로운 층간소음 해결 플랫폼 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 210 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* 평화로운 청록색 계열 */
+    --primary: 185 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 185 60% 88%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 185 20% 95%;
+    --secondary-foreground: 185 85% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 210 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 185 45% 90%;
+    --accent-foreground: 185 85% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* 소음 상태 색상 */
+    --success: 140 75% 35%; /* 조용함 - 녹색 */
+    --success-foreground: 0 0% 100%;
+    --success-soft: 140 45% 90%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 35 85% 55%; /* 경고 - 주황색 */
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 35 60% 92%;
+
+    --destructive: 0 75% 55%; /* 위험 - 빨강색 */
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 45% 95%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 95%;
+    --ring: 185 85% 35%;
+
+    /* 그라데이션 */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(185 85% 45%));
+    --gradient-peaceful: linear-gradient(180deg, hsl(var(--primary-soft)), transparent);
+    --gradient-status-good: linear-gradient(135deg, hsl(var(--success)), hsl(140 75% 45%));
+    --gradient-status-warning: linear-gradient(135deg, hsl(var(--warning)), hsl(35 85% 65%));
+    --gradient-status-danger: linear-gradient(135deg, hsl(var(--destructive)), hsl(0 75% 65%));
+
+    /* 그림자 */
+    --shadow-peaceful: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px hsl(210 15% 15% / 0.08);
+    --shadow-status: 0 4px 15px hsl(var(--primary) / 0.15);
 
     --radius: 0.5rem;
 

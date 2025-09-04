@@ -1,56 +1,26 @@
-# Welcome to your Lovable project
+# 🌙 QuietNest - 층간소음 분쟁 해결 플랫폼
 
-## Project info
+평화로운 공동생활을 위한 올인원 솔루션
+
+## 프로젝트 정보
 
 **URL**: https://lovable.dev/projects/096c8ee9-98a1-4aa0-9e80-ab8fdf1d1dab
 
-## How can I edit this code?
+## 앱 개요
 
-There are several ways of editing your application.
+QuietNest는 아파트와 공동주택에서 발생하는 층간소음 문제를 해결하기 위해 설계된 종합 플랫폼입니다.
+사용자는 소음을 기록하고, 이웃과 안전하게 소통하며, 필요 시 전문가 상담과 생활 솔루션까지 이어갈 수 있습니다.
 
-**Use Lovable**
+### 주요 기능
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/096c8ee9-98a1-4aa0-9e80-ab8fdf1d1dab) and start prompting.
+🏠 **내 아파트**: 아파트 도면 기반 실시간 소음 현황 모니터링
+💬 **커뮤니티**: 이웃과의 소통 및 관리사무소 공지사항
+📊 **메인 대시보드**: 개인 알림/경고 관리 및 바로가기 기능
+⚖️ **법률상담**: 전문 변호사와의 상담 예약 및 연결 서비스
+🛒 **마켓**: 방음 솔루션 및 제휴 서비스 제공
+👤 **프로필**: 개인 소음 기록 및 활동 이력 관리
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## 기술 스택
 
 This project is built with:
 

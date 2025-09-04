@@ -1,12 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { TabNavigation } from "@/components/TabNavigation";
+import { MainDashboard } from "@/pages/MainDashboard";
+import { ApartmentView } from "@/pages/ApartmentView";
+import { CommunityView } from "@/pages/CommunityView";
+import { LegalConsultationView } from "@/pages/LegalConsultationView";
+import { MarketView } from "@/pages/MarketView";
+import { ProfileView } from "@/pages/ProfileView";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("main");
+
+  const renderActiveTab = () => {
+    switch (activeTab) {
+      case "main":
+        return <MainDashboard />;
+      case "apartment":
+        return <ApartmentView />;
+      case "community":
+        return <CommunityView />;
+      case "legal":
+        return <LegalConsultationView />;
+      case "market":
+        return <MarketView />;
+      case "profile":
+        return <ProfileView />;
+      default:
+        return <MainDashboard />;
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {renderActiveTab()}
+      <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };
