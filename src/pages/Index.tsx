@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TabNavigation } from "@/components/TabNavigation";
 import { MainDashboard } from "@/pages/MainDashboard";
 import { ApartmentView } from "@/pages/ApartmentView";
@@ -6,9 +6,11 @@ import { CommunityView } from "@/pages/CommunityView";
 import { LegalConsultationView } from "@/pages/LegalConsultationView";
 import { MarketView } from "@/pages/MarketView";
 import { ProfileView } from "@/pages/ProfileView";
+import { useMobileApp } from "@/hooks/useMobile";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("main");
+  const { isNative } = useMobileApp();
 
   const renderActiveTab = () => {
     switch (activeTab) {
@@ -30,7 +32,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {renderActiveTab()}
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>

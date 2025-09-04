@@ -35,17 +35,18 @@ export function MainDashboard() {
   };
 
   return (
-    <div className="pb-20 pt-6 px-4 space-y-6 bg-background min-h-screen">
+    <div className="pb-20 pt-safe px-4 space-y-6 bg-background min-h-screen overflow-x-hidden">
       {/* Header */}
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-foreground">🌙 QuietNest</h1>
-        <p className="text-muted-foreground">평화로운 우리 아파트</p>
+      <div className="text-center pt-4">
+        <h1 className="text-3xl font-bold text-foreground mb-2">🌙 QuietNest</h1>
+        <p className="text-base text-muted-foreground">평화로운 우리 아파트</p>
       </div>
 
       {/* 실시간 소음 현황 */}
       <NoiseStatusIndicator 
         status="quiet" 
         alertCount={0}
+        className="mobile-card"
       />
 
       {/* 바로가기 버튼들 */}
@@ -62,24 +63,24 @@ export function MainDashboard() {
       />
 
       {/* 최근 활동 */}
-      <div className="bg-card rounded-xl p-4 shadow-card">
-        <h3 className="text-lg font-semibold mb-3 text-foreground">최근 활동</h3>
+      <div className="bg-card rounded-xl p-6 shadow-card mobile-card">
+        <h3 className="text-xl font-semibold mb-4 text-foreground">최근 활동</h3>
         
-        <div className="space-y-3">
-          <div className="flex items-center gap-3 p-3 bg-success-soft rounded-lg">
-            <div className="w-2 h-2 bg-success rounded-full"></div>
+        <div className="space-y-4">
+          <div className="flex items-center gap-4 p-4 bg-success-soft rounded-xl mobile-transition">
+            <div className="w-3 h-3 bg-success rounded-full flex-shrink-0"></div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-success">
+              <p className="text-sm font-medium text-success mb-1">
                 조용한 하루를 보내고 있습니다
               </p>
               <p className="text-xs text-muted-foreground">오늘 0건의 소음 신고</p>
             </div>
           </div>
           
-          <div className="flex items-center gap-3 p-3 bg-primary-soft rounded-lg">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <div className="flex items-center gap-4 p-4 bg-primary-soft rounded-xl mobile-transition">
+            <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0"></div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-primary">
+              <p className="text-sm font-medium text-primary mb-1">
                 501호에서 사과 메시지를 받았습니다
               </p>
               <p className="text-xs text-muted-foreground">어제 오후 3:22</p>
